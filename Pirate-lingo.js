@@ -23,3 +23,13 @@ function grabscrab(anagram, dictionary) {
 }
 
 // or
+
+function grabscrab(anagram, dictionary) {
+  let translation = [];
+  for(let i=0; i<dictionary.length; i++){
+      if(anagram.split("").sort().join("") == dictionary[i].split("").sort().join("")){
+        translation.push(dictionary[i])
+      }
+  }
+  return translation
+}
